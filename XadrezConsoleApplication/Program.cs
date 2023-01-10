@@ -10,6 +10,10 @@ try
     tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 4));
     tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
 
+    tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(7, 0));
+    tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(5, 4));
+    tab.colocarPeca(new Rei(tab, Cor.Branca), new Posicao(4, 2));
+
     Tela.imprimirTabuleiro(tab);
 } catch (TabuleiroException e)
 {
