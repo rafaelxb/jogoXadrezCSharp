@@ -6,6 +6,13 @@ namespace XadrezConsoleApplication
 {
     class Tela
     {
+        public static void mostraTurnoAtual(PartidaDeXadrez partida)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Turno: " + partida.turno);
+            Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+            Console.WriteLine();
+        }
         public static void imprimirTabuleiro(Tabuleiro tab)
         {
             for (int linha = 0; linha < tab.linhas; linha++)
