@@ -11,9 +11,7 @@ try
         try
         {
             Console.Clear();
-            Tela.imprimirTabuleiro(partida.tab);
-
-            Tela.mostraTurnoAtual(partida);
+            Tela.imprimirPartida(partida);
 
             Console.WriteLine();
             Console.Write("Origem: ");
