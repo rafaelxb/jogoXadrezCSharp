@@ -15,10 +15,20 @@ namespace XadrezConsoleApplication
 
             mostraTurnoAtual(partida);
 
-            if (partida.xeque)
+            if (!partida.terminada)
             {
-                Console.WriteLine("XEQUE!");
+                if (partida.xeque)
+                {
+                    Console.WriteLine("Você está em XEQUE!");
+                }
             }
+            else
+            {
+                Console.WriteLine("Xequemate!");
+                Console.WriteLine("Vencedor: " + partida.jogadorAtual);
+            }
+
+
 
         }
 
