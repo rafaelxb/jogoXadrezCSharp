@@ -14,6 +14,12 @@ namespace XadrezConsoleApplication
             imprimirPecasCapturadas(partida);
 
             mostraTurnoAtual(partida);
+
+            if (partida.xeque)
+            {
+                Console.WriteLine("XEQUE!");
+            }
+
         }
 
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida)
