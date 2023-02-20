@@ -14,7 +14,21 @@ namespace xadrez
         private bool podeMover(Posicao pos)
         {
             Peca p = tab.peca(pos);
-            return p == null || p.cor != this.cor;
+            if (p != null)
+            {
+                if (p.cor != cor)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public override bool[,] movimentosPossiveis()

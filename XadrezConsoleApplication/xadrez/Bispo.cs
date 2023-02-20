@@ -14,7 +14,21 @@ namespace xadrez
         private bool podeMover(Posicao pos)
         {
             Peca p = tab.peca(pos);
-            return p == null || p.cor != cor;
+            if (p != null)
+            {
+                if (p.cor != cor)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public override bool[,] movimentosPossiveis()
@@ -32,7 +46,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
+                pos.definirValores(pos.linha - 1, pos.coluna - 1);
             }
 
             //nordeste
@@ -44,7 +58,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
+                pos.definirValores(pos.linha - 1, pos.coluna + 1);
             }
 
             //sudeste
@@ -56,7 +70,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
+                pos.definirValores(pos.linha + 1, pos.coluna + 1);
             }
 
             //sudoeste
@@ -68,7 +82,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
+                pos.definirValores(pos.linha + 1, pos.coluna - 1);
             }
 
             return mat;
